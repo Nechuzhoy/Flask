@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ adv.title }}{% endblock %}
+
+{% block content %}
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">{{ adv.title }}</h5>
+      <h6 class="card-subtitle mb-2 text-muted">{{ adv.description }}</h6>
+      <p class="card-text">{{ adv.owner }}</p>
+      <p class="card-text">{{ adv.date_of_creation }}</p>
+      <a href="{{ url_for('index') }}" class="btn btn-secondary">&larr; Назад</a>
+    </div>
+  </div>
+{% endblock %}
